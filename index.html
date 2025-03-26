@@ -5,38 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Countdown to PC01</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #000;
-      color: #00FFAA;
-      font-family: 'Share Tech Mono', monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
-    }
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    .countdown {
-      display: flex;
-      gap: 10px;
-      font-size: 3rem;
-      text-shadow: 0 0 10px #00ffcc;
-    }
-    .unit {
-      text-align: center;
-    }
-    .label {
-      font-size: 0.75rem;
-      color: #00ffee99;
-    }
-  </style>
+<style>
+  body {
+    background-color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #000;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #be4d86; /* deep mauve-pink */
+  }
+
+  .countdown {
+    display: flex;
+    gap: 15px;
+  }
+
+  .unit {
+    text-align: center;
+  }
+
+  .card {
+    background-color: #f9d6e5; /* soft pink */
+    color: #fff;
+    font-size: 2.5rem;
+    width: 80px;
+    height: 100px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+    border-top: 2px solid #f0a5c0;
+    border-bottom: 2px solid #f0a5c0;
+  }
+
+  .label {
+    font-size: 0.75rem;
+    color: #888;
+  }
+</style>
 </head>
 <body>
+  <h1>Final Boarding Call: Subscription closes in...</h1>
+
+<div class="countdown" id="timer">
+  <div class="unit">
+    <div class="card" id="days">00</div>
+    <div class="label">Days</div>
+  </div>
+  <div class="unit">
+    <div class="card" id="hours">00</div>
+    <div class="label">Hours</div>
+  </div>
+  <div class="unit">
+    <div class="card" id="minutes">00</div>
+    <div class="label">Minutes</div>
+  </div>
+  <div class="unit">
+    <div class="card" id="seconds">00</div>
+    <div class="label">Seconds</div>
+  </div>
+</div>
+
   <h1>Countdown to Subscription Close</h1>
   <div class="countdown" id="timer">
     <div class="unit"><div id="days">00</div><div class="label">Days</div></div>
